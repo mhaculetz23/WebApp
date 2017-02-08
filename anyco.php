@@ -1,12 +1,7 @@
-$conn = oci_connect(username,password,server);
-username = 'hr'
-password = 'hr'
-server = '//localhost/XE'
-
 <?php
 require('anyco_ui.inc');
 
-$conn = oci_connect('hr','hr','//localhost/XE')
+$conn = oci_connect('hr','hr','//localhost/XE');
 ui_print_header('Departments');
 do_query($conn,'SELECT * FROM DEPARTMENTS');
 ui_print_footer(date('Y-m-d H:i:s'));
@@ -20,7 +15,7 @@ function do_query($conn,$query){
     print'<tr>';
     foreach($row as $item){
       print '<td>'.
-        ($item ?htmlentities($item): '&nbsp;' . '</td>';
+        ($item ?htmlentities($item): '&nbsp;') . '</td>';
          }
          print '</tr>';
          }
