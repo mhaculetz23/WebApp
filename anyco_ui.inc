@@ -20,7 +20,7 @@
 END;
     }
     
-  function_ui_print_footer ($date){
+  function ui_print_footer ($date){
     $date = htmlentities($date);
     echo <<<END
     
